@@ -1,0 +1,92 @@
+<div class="conteudo">
+
+    <div class="carrinho">
+        <div class="col">
+            <h1>Carrinho de Compras</h1>
+            <p>Preço</p>
+        </div>
+        <div class="card">
+            <hr>
+            <div class="item">
+                <div class="checkbox"></div>
+                <div class="airpad"></div>
+                <div class="info">
+                    <h3>{{airpod.nome}}</h3>
+                    <h1 class="estoque">{{airpod.status}}</h1>
+                    <h1 class="vendido">Vendido por:&nbsp;<h1>{{airpod.vendido}}</h1> </h1>
+                    <h1 class="vendido">Cor:&nbsp;<h1>{{airpod.cor}}</h1> </h1>
+                    <h1 class="vendido">Dimensões:&nbsp;<h1>{{airpod.dimensoes}}</h1> </h1>
+                </div>
+                <div class="preco">
+                    <h3>{{preco_a}}</h3>
+                    <h1 class="metodo">à vista no Pix e boleto ou em até 10x de {{parcelado_a}} sem juros</h1>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="card">
+            <div class="item">
+                <div class="checkbox"></div>
+                <div class="apple"></div>
+                <div class="info">
+                    <h3>{{iphone.nome}}</h3>
+                    <h1 class="estoque">{{iphone.status}}</h1>
+                    <h1 class="vendido">Vendido por:&nbsp;<h1>{{iphone.vendido}}</h1> </h1>
+                    <h1 class="vendido">Cor:&nbsp;<h1>{{iphone.cor}}</h1> </h1>
+                    <h1 class="vendido">Dimensões:&nbsp;<h1>{{iphone.dimensoes}}</h1> </h1>
+                </div>
+                <div class="preco">
+                    <h3>{{preco_i}}</h3>
+                    <h1 class="metodo">à vista no Pix e boleto ou em até 10x de {{parcelado_i}} sem juros</h1>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <hr>
+            <div class="item">
+                <div class="checkbox"></div>
+                <div class="tv"></div>
+                <div class="info">
+                    <h3>{{tv.nome}}</h3>
+                    <h1 class="estoque">{{tv.status}}</h1>
+                    <h1 class="vendido">Vendido por:&nbsp;<h1>{{tv.vendido}}</h1> </h1>
+                    <h1 class="vendido">Cor:&nbsp;<h1>{{tv.cor}}</h1> </h1>
+                    <h1 class="vendido">Dimensões:&nbsp;<h1>{{tv.dimensoes}}</h1> </h1>
+                </div>
+                <div class="preco">
+                    <h3>{{preco_t}}</h3>
+                    <h1 class="metodo">à vista no Pix e boleto ou em até 10x de {{parcelado_t}} sem juros</h1>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <hr>
+            <div class="item">
+                <div class="checkbox"></div>
+                <div class="geladeira"></div>
+                <div class="info">
+                    <h3>{{geladeira.nome}}</h3>
+                    <h1 class="nestoque">{{geladeira.status}}</h1>
+                    <h1 class="vendido">Vendido por:&nbsp;<h1>{{geladeira.vendido}}</h1> </h1>
+                    <h1 class="vendido">Cor:&nbsp;<h1>{{geladeira.cor}}</h1> </h1>
+                    <h1 class="vendido">Dimensões:&nbsp;<h1>{{geladeira.dimensoes}}</h1> </h1>
+                </div>
+                <div class="preco">
+                    <h3>{{preco_g}}</h3>
+                    <h1 class="metodo">à vista no Pix e boleto ou em até 10x de {{parcelado_g}} sem juros</h1>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="pagamento">
+            <div class="soma">
+               <h1>Total: {{total}}</h1>
+            </div>
+            <div class="frete" *ngIf="frete.cidade == 'São Paulo' || frete.cidade == 'Rio de Janeiro' || frete.cidade == 'Minas Gerais' || frete.cidade == 'Espírito Santo' else contrario" > <h1>Total + Frete: {{frete_sudeste}}</h1></div>
+        </div>
+
+        <ng-template #contrario>
+            <div class="frete"> <h1>Total + Frete: {{frete_outros}}</h1></div>
+        </ng-template>
+    </div>
+</div>
