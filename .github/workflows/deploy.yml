@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx ng build --output-path dist --base-href /
+        run: npx ng build --output-path dist --base-href /Desafio_Amazon/
 
       - name: Add 404.html for SPA routing
         run: cp dist/browser/index.html dist/browser/404.html
